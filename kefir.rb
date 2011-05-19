@@ -27,7 +27,6 @@ class IRCBot < Net::IRC::Client
 	
 	def on_privmsg(m)
 		
-		#msg = m[1].encode('external')
 		msg = m[1].toutf8
 		
 		if msg =~ /(?:か|ね|の)[?？]/u then
